@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>{{ title }}</title>
+</head>
+
+<body>
+	<h1>{{ title }}</h1>
+
+	<ol id="messages">
+		{{#messages}}
+		<li>{{.}}</li>
+		{{/messages}}
+	</ol>
+
+	<form is="message-form" action="{{formURI}}" method="post">
+		<input type="text" name="message" autofocus>
+		<button>send</button>
+	</form>
+
+	<p class="timestamp">{{timestamp}}</p>
+
+	<script src="document-register-element.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
